@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Sky Stack - HTML5 Canvas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-ui">
+    <header class="top-bar">
+      <div class="logo">Sky Stack</div>
+      <div class="score">Score: <span id="score">0</span></div>
+    </header>
+
+    <canvas id="game"></canvas>
+
+    <div id="game-over" class="overlay hidden" aria-hidden="true">
+      <div class="overlay-card">
+        <h2>Game Over</h2>
+        <p>Your stack collapsed!</p>
+        <div class="overlay-actions">
+          <button id="restart" class="primary">Restart</button>
+          <button id="watch-ad" class="secondary">Watch Ad to Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="rewarded-ad" class="overlay hidden" aria-hidden="true">
+      <div class="overlay-card">
+        <h2>Rewarded Ad</h2>
+        <p>Playing your ad... <span id="ad-timer">3</span></p>
+      </div>
+    </div>
+
+    <div id="banner-ad">Banner Ad Placeholder</div>
+  </div>
+
+  <script src="ads.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
